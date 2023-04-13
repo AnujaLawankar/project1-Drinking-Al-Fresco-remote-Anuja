@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Drinking Al Fresco</title>
+</head>
+
+<body>
+    <header class="headerid is-mobile">
+        <h1 class="is-size-1 has-text-weight-bold">Drinking Al Fresco</h1>
+    </header>
+
+    <div class="search is-mobile">
+        <!-- Div for search area -->
+        <aside class="m-3">
+            <!-- Search box and button -->
+            <div class="search-container">
+                <input id="city" type="text" placeholder="Search for City">
+                <button class="btn" type="submit" id="searchBtn">Search</button>
+            </div>
+            <p class="is-size-7 is-italic">E.g. Detroit or New York</p>
+            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results"
+                    style="background-color:  rgb(214, 157, 83)">Clear History</button>
+            </h3>
+            <div id="search-history">
+            </div>
+            <hr>
+        </aside>
+    </div>
+    
+    <!-- Search results for breweries -->
+    <div class="tile is-mobile">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer' style='color:orange;'>Local
+                    Brewery Results</p>
+
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tile">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+    </div>
+    
+    <div class="tile is-mobile">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="brewery"></div>
+            </article>
+        </div>
+    </div>
+<!-- Current weather conditions and forecast -->
+    <div class="tile">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer'
+                    style='font-size:40px;color:orange'>Current Weather Conditions</p>
+
+                <h2 class="is-size-4 has-text-weight-bold " id="city-date"><img id="city-icon" src="" alt=""></h2>
+                <p id="city-temp"></p>
+                <p id="city-wind"></p>
+                <p id="city-humidity"></p>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+
+                <div class="day" id="date"></div>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <div class="day"></div>
+            </article>
+        </div>
+    </div>
+
+    <div class="bottom is-mobile">
+        <div class="columns is-mobile">
+            <div class="column">
+                <img src="./assets/images/image1.jpg">
+            </div>
+            <div class="column">
+                <img src="./assets/images/image2.jpg">
+            </div>
+            <div class="column">
+                <img src="./assets/images/images3.jpg">
+            </div>
+            <div class="column">
+                <img src="./assets/images/images4.jpg">
+            </div>
+            <div class="column">
+                <img src="./assets/images/images5.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Files -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
